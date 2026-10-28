@@ -8,7 +8,22 @@ let peerConnection;
 const rtcSettings = {
     iceServers: [
         { urls: 'stun:stun.l.google.com:19302' },
-        { urls: 'stun:stun1.l.google.com:19302' }
+        { urls: 'stun:stun1.l.google.com:19302' },
+        {
+            urls: 'turn:global.relay.metered.ca:80',
+            username: '5f814049be5b8eb47e29ec3f',
+            credential: 'wq66STAzGrF6bAyM'
+        },
+        {
+            urls: 'turn:global.relay.metered.ca:80?transport=tcp',
+            username: '5f814049be5b8eb47e29ec3f',
+            credential: 'wq66STAzGrF6bAyM'
+        },
+        {
+            urls: 'turn:global.relay.metered.ca:443',
+            username: '5f814049be5b8eb47e29ec3f',
+            credential: 'wq66STAzGrF6bAyM'
+        }
     ]
 };
 
